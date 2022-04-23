@@ -20,7 +20,6 @@
 		D56445C728141BA500510395 /* ImageRecognitionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445C628141BA500510395 /* ImageRecognitionServices.swift */; };
 		D56445C928141C2500510395 /* ImageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445C828141C2500510395 /* ImageResults.swift */; };
 		D56445CB28141EE100510395 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445CA28141EE100510395 /* Constants.swift */; };
-		D56445CE2814332000510395 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445CD2814332000510395 /* ResizeImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		D56445C628141BA500510395 /* ImageRecognitionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionServices.swift; sourceTree = "<group>"; };
 		D56445C828141C2500510395 /* ImageResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResults.swift; sourceTree = "<group>"; };
 		D56445CA28141EE100510395 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D56445CD2814332000510395 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 			children = (
 				D56445BC281402F100510395 /* PlantTableViewCell.swift */,
 				D56445C128140B6200510395 /* CustomLabel.swift */,
-				D56445CD2814332000510395 /* ResizeImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				D56445C228140B6200510395 /* CustomLabel.swift in Sources */,
 				D56445BE281402F100510395 /* PlantTableViewCell.swift in Sources */,
 				D56445A42813F3B400510395 /* AppDelegate.swift in Sources */,
-				D56445CE2814332000510395 /* ResizeImage.swift in Sources */,
 				D56445A62813F3B400510395 /* SceneDelegate.swift in Sources */,
 				D56445C728141BA500510395 /* ImageRecognitionServices.swift in Sources */,
 				D56445CB28141EE100510395 /* Constants.swift in Sources */,
