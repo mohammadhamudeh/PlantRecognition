@@ -31,6 +31,8 @@ class ChooseImageViewController: UIViewController ,UIImagePickerControllerDelega
         
     }
     @IBAction func selectPhotoBtnPressed(_ sender: Any) {
+        imageResults =  nil
+        plantResultsTableView.reloadData()
         let alert = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
             alert.dismiss(animated: true) {
@@ -113,12 +115,63 @@ class ChooseImageViewController: UIViewController ,UIImagePickerControllerDelega
             case .failure(_):
                 let alert = UIAlertController(title: "Error", message: "Un expected error, Please Try Again", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
-                    alert.dismiss(animated: true)
+                    alert.dismiss(animated: true) {
+                        self.loadingIndicator.stopAnimating()
+                        self.loadingIndicator.isHidden = true
+                    }
+                   
                 }))
                 self.present(alert, animated: true)
             }
             
         }
+    }
+        func getImageResults(imageData:Data){
+            ImageRecognitionServices.instance.getImageRecognitionResults(image: imageData) { res in
+                switch res{
+                case .success(let data):
+                    self.imageResults = data
+                    self.loadingIndicator.stopAnimating()
+                    self.loadingIndicator.isHidden = true
+                    self.plantResultsTableView.reloadData()
+                case .failure(_):
+                    let alert = UIAlertController(title: "Error", message: "Un expected error, Please Try Again", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                        alert.dismiss(animated: true) {
+                            self.loadingIndicator.stopAnimating()
+                            self.loadingIndicator.isHidden = true
+                        }
+                       
+                    }))
+                    self.present(alert, animated: true)
+                }
+                
+            }
+    }
+    func saveImage(image: UIImage){
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+
+        let fileName = "takenPhoto-\(Date()).png"
+            let fileURL = documentsDirectory.appendingPathComponent(fileName)
+            guard let data = image.jpegData(compressionQuality: 1) else { return }
+
+           
+            if FileManager.default.fileExists(atPath: fileURL.path) {
+                do {
+                    try FileManager.default.removeItem(atPath: fileURL.path)
+                    print("Removed old image")
+                } catch let removeError {
+                    print("couldn't remove file at path", removeError)
+                }
+
+            }
+
+            do {
+                try data.write(to: fileURL)
+                getImageResults(imageURL: fileURL)
+            } catch let error {
+                print("error saving file with error", error)
+            }
     }
     @IBAction func touchTohide(_ sender: Any) {
         self.blureView.isHidden = true
@@ -126,11 +179,16 @@ class ChooseImageViewController: UIViewController ,UIImagePickerControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let plantImageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL{
-            
             self.plantImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
             getImageResults(imageURL: plantImageURL)
-            
-            
+
+
+        }
+        if let plantImageData = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.plantImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            saveImage(image: plantImageData)
+//            getImageResults(imageURL: plantImageData)
+           
         }
         dismiss(animated: true, completion: {
             self.loadingIndicator.startAnimating()
