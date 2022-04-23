@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D56445A42813F3B400510395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445A32813F3B400510395 /* AppDelegate.swift */; };
+		D56445A62813F3B400510395 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445A52813F3B400510395 /* SceneDelegate.swift */; };
+		D56445A82813F3B400510395 /* ChooseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445A72813F3B400510395 /* ChooseImageViewController.swift */; };
+		D56445AB2813F3B400510395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56445A92813F3B400510395 /* Main.storyboard */; };
+		D56445AD2813F3B700510395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56445AC2813F3B700510395 /* Assets.xcassets */; };
+		D56445B02813F3B700510395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56445AE2813F3B700510395 /* LaunchScreen.storyboard */; };
+		D56445BE281402F100510395 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445BC281402F100510395 /* PlantTableViewCell.swift */; };
+		D56445BF281402F100510395 /* PlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D56445BD281402F100510395 /* PlantTableViewCell.xib */; };
+		D56445C228140B6200510395 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445C128140B6200510395 /* CustomLabel.swift */; };
+		D56445C528141B8300510395 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D56445C428141B8300510395 /* Alamofire */; };
+		D56445C728141BA500510395 /* ImageRecognitionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445C628141BA500510395 /* ImageRecognitionServices.swift */; };
+		D56445C928141C2500510395 /* ImageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445C828141C2500510395 /* ImageResults.swift */; };
+		D56445CB28141EE100510395 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445CA28141EE100510395 /* Constants.swift */; };
+		D56445CE2814332000510395 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56445CD2814332000510395 /* ResizeImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D56445A02813F3B400510395 /* Plant Recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56445A32813F3B400510395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D56445A52813F3B400510395 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D56445A72813F3B400510395 /* ChooseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImageViewController.swift; sourceTree = "<group>"; };
+		D56445AA2813F3B400510395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D56445AC2813F3B700510395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D56445AF2813F3B700510395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D56445B12813F3B700510395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56445BC281402F100510395 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		D56445BD281402F100510395 /* PlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantTableViewCell.xib; sourceTree = "<group>"; };
+		D56445C128140B6200510395 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		D56445C628141BA500510395 /* ImageRecognitionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionServices.swift; sourceTree = "<group>"; };
+		D56445C828141C2500510395 /* ImageResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResults.swift; sourceTree = "<group>"; };
+		D56445CA28141EE100510395 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D56445CD2814332000510395 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D564459D2813F3B400510395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56445C528141B8300510395 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D56445972813F3B400510395 = {
+			isa = PBXGroup;
+			children = (
+				D56445A22813F3B400510395 /* Plant Recognition */,
+				D56445A12813F3B400510395 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D56445A12813F3B400510395 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D56445A02813F3B400510395 /* Plant Recognition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D56445A22813F3B400510395 /* Plant Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				D56445CC28141EE600510395 /* Utils */,
+				D56445C0281402FD00510395 /* XIB */,
+				D56445BB2813F41B00510395 /* Storyboards */,
+				D56445BA2813F3F800510395 /* Services */,
+				D56445B92813F3EF00510395 /* Model */,
+				D56445B82813F3EA00510395 /* View */,
+				D56445B72813F3DD00510395 /* Controllers */,
+				D56445A32813F3B400510395 /* AppDelegate.swift */,
+				D56445A52813F3B400510395 /* SceneDelegate.swift */,
+				D56445AC2813F3B700510395 /* Assets.xcassets */,
+				D56445B12813F3B700510395 /* Info.plist */,
+			);
+			path = "Plant Recognition";
+			sourceTree = "<group>";
+		};
+		D56445B72813F3DD00510395 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D56445A72813F3B400510395 /* ChooseImageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D56445B82813F3EA00510395 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D56445BC281402F100510395 /* PlantTableViewCell.swift */,
+				D56445C128140B6200510395 /* CustomLabel.swift */,
+				D56445CD2814332000510395 /* ResizeImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D56445B92813F3EF00510395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D56445C828141C2500510395 /* ImageResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D56445BA2813F3F800510395 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D56445C628141BA500510395 /* ImageRecognitionServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D56445BB2813F41B00510395 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D56445A92813F3B400510395 /* Main.storyboard */,
+				D56445AE2813F3B700510395 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D56445C0281402FD00510395 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				D56445BD281402F100510395 /* PlantTableViewCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		D56445CC28141EE600510395 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D56445CA28141EE100510395 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D564459F2813F3B400510395 /* Plant Recognition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56445B42813F3B700510395 /* Build configuration list for PBXNativeTarget "Plant Recognition" */;
+			buildPhases = (
+				D564459C2813F3B400510395 /* Sources */,
+				D564459D2813F3B400510395 /* Frameworks */,
+				D564459E2813F3B400510395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plant Recognition";
+			packageProductDependencies = (
+				D56445C428141B8300510395 /* Alamofire */,
+			);
+			productName = "Plant Recognition";
+			productReference = D56445A02813F3B400510395 /* Plant Recognition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D56445982813F3B400510395 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					D564459F2813F3B400510395 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = D564459B2813F3B400510395 /* Build configuration list for PBXProject "Plant Recognition" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D56445972813F3B400510395;
+			packageReferences = (
+				D56445C328141B8200510395 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = D56445A12813F3B400510395 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D564459F2813F3B400510395 /* Plant Recognition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D564459E2813F3B400510395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56445B02813F3B700510395 /* LaunchScreen.storyboard in Resources */,
+				D56445BF281402F100510395 /* PlantTableViewCell.xib in Resources */,
+				D56445AD2813F3B700510395 /* Assets.xcassets in Resources */,
+				D56445AB2813F3B400510395 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D564459C2813F3B400510395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56445C928141C2500510395 /* ImageResults.swift in Sources */,
+				D56445A82813F3B400510395 /* ChooseImageViewController.swift in Sources */,
+				D56445C228140B6200510395 /* CustomLabel.swift in Sources */,
+				D56445BE281402F100510395 /* PlantTableViewCell.swift in Sources */,
+				D56445A42813F3B400510395 /* AppDelegate.swift in Sources */,
+				D56445CE2814332000510395 /* ResizeImage.swift in Sources */,
+				D56445A62813F3B400510395 /* SceneDelegate.swift in Sources */,
+				D56445C728141BA500510395 /* ImageRecognitionServices.swift in Sources */,
+				D56445CB28141EE100510395 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D56445A92813F3B400510395 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D56445AA2813F3B400510395 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D56445AE2813F3B700510395 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D56445AF2813F3B700510395 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D56445B22813F3B700510395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D56445B32813F3B700510395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D56445B52813F3B700510395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5UXR9QUML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plant Recognition/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo library ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.y.gsw.Plant-Recognition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D56445B62813F3B700510395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5UXR9QUML;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plant Recognition/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo library ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.y.gsw.Plant-Recognition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D564459B2813F3B400510395 /* Build configuration list for PBXProject "Plant Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56445B22813F3B700510395 /* Debug */,
+				D56445B32813F3B700510395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56445B42813F3B700510395 /* Build configuration list for PBXNativeTarget "Plant Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56445B52813F3B700510395 /* Debug */,
+				D56445B62813F3B700510395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D56445C328141B8200510395 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D56445C428141B8300510395 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D56445C328141B8200510395 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D56445982813F3B400510395 /* Project object */;
+}
